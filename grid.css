@@ -141,3 +141,14 @@ img {
 .footer {
   grid-area: footer;
 }
+
+.grid-implicit {
+  /* Grid 4c x 3r */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
+
+  /* 
+  Aquí generamos una cuadrícula de 4 columnas por 3 filas, es decir 12 casillas, donde se colocan 12 de los items que tenemos en nuestro html. Pero como tenemos 19 items los siguientes 7 items se repartiran la altura sobrante del contenedor grid para hacer las filas que hagan falta. Y si no entran dentro del contenedor cogerán la altura auto (es dcir la de su contenido) y desbordarán del contenedor padre.
+  */
+}
