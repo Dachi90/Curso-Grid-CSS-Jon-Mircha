@@ -58,7 +58,7 @@ img {
   background-color: #666;
   border: medium solid #999;
 }
-
+/* Video 2 */
 .grid-explicit {
   display: grid;
   /* Grid 3cx3r */
@@ -73,6 +73,8 @@ img {
   grid-template-columns: 20% repeat(2, 30%) 20%;
   grid-template-rows: repeat(5, auto);
 }
+
+/* Video 3 */
 
 .grid-explicit .item:nth-child(10) {
   color: red;
@@ -99,6 +101,8 @@ img {
   grid-column: 1 / span 2;
 }
 
+/* Video 4 */
+
 .grid-line-names {
   display: grid;
   /* Grid de 3cx3r */
@@ -114,6 +118,8 @@ img {
   grid-column: linea-c1 / linea-c4;
   grid-area: linea-r3/ linea-c1 / linea-r4 / linea-c4;
 }
+
+/* Video 5 */
 
 .grid-areas {
   display: grid;
@@ -142,6 +148,8 @@ img {
   grid-area: footer;
 }
 
+/* Video 6 */
+
 .grid-implicit {
   /* Grid 4c x 3r */
   display: grid;
@@ -152,6 +160,8 @@ img {
   Aquí generamos una cuadrícula de 4 columnas por 3 filas, es decir 12 casillas, donde se colocan 12 de los items que tenemos en nuestro html. Pero como tenemos 19 items los siguientes 7 items se repartiran la altura sobrante del contenedor grid para hacer las filas que hagan falta. Y si no entran dentro del contenedor cogerán la altura auto (es dcir la de su contenido) y desbordarán del contenedor padre.
   */
 }
+
+/* Video 7 */
 
 .grid-flow {
   /* Grid 5c x 3r */
@@ -164,6 +174,8 @@ img {
   grid-auto-flow: column;
   grid-auto-columns: 50px;
 }
+
+/* Video 8 */
 
 .grid-flow-dense {
   display: grid;
@@ -180,6 +192,8 @@ img {
   grid-row: span 3;
   grid-column: span 3;
 }
+
+/* Video 9 */
 
 .grid-layers {
   display: grid;
@@ -215,6 +229,8 @@ img {
   opacity: 0.75;
 }
 
+/* Video 10  */
+
 .grid-order {
   display: grid;
   /* Grid 3c x 2r */
@@ -239,7 +255,9 @@ img {
   /* Grid 3c x 2r */
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: repeat(2, 200px);
+  /* Justify-items alinea mis elementos grid en el eje horizontal (X)*/
   justify-items: center;
+  /* align-items alinea mis elementos grid en el eje vertical (Y)*/
   align-items: center;
 }
 
@@ -250,4 +268,28 @@ img {
 .grid-align .item:nth-child(1) {
   justify-self: end;
   align-self: start;
+}
+
+/* Video 11 */
+
+.grid-align-tracks {
+  display: grid;
+  /* Grid 3c x 2r */
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+  /* Justify-content alinea mis los tracks (filas o columnas enteras) de la  grid en el eje horizontal (X)*/
+  justify-content: start;
+  justify-content: end;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+
+  /* align-content alinea mis los tracks (filas o columnas enteras) de la  grid en el eje vertical (Y)*/
+  align-content: start;
+  align-content: end;
+  align-content: center;
+  align-content: space-between;
+  align-content: space-around;
+  align-content: space-evenly;
 }
