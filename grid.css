@@ -293,3 +293,13 @@ img {
   align-content: space-around;
   align-content: space-evenly;
 }
+
+/* Video 12 */
+
+.grid-min-max {
+  display: grid;
+  /* Grid 4c x ?r */
+  grid-template-columns: repeat(4, minmax(100px, 200px));
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+  grid-template-columns: repeat(4, minmax(100px, min-content));
+}
